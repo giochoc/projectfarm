@@ -8,30 +8,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="#home" class="logo" onclick="scrollToSection('home')">
                     <i class="fas fa-heartbeat"></i>
                     <span>Saúde Total</span>
-                </div>
+                </a>
                 
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" id="searchInput" placeholder="Buscar medicamentos...">
-                        <button type="button" id="searchBtn">
+                        <input type="text" id="searchInput" placeholder="Buscar medicamentos..." disabled> 
+                        <button type="button" id="searchBtn" disabled>
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
                 
                 <div class="header-actions">
-                    <button class="header-btn">
+                    <button class="header-btn" onclick="alert('Funcionalidade de Login/Cadastro.')">
                         <i class="fas fa-user"></i>
                         <span>Entrar</span>
                     </button>
-                    <button class="header-btn">
+                    <button class="header-btn" onclick="alert('Funcionalidade de Carrinho de Compras.')">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Carrinho</span>
                     </button>
@@ -40,21 +40,18 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav class="navigation">
         <div class="container">
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Início</a></li>
-                <li><a href="#produtos" class="nav-link">Produtos</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#home" class="nav-link active" onclick="scrollToSection('home')">Início</a></li>
+                <li><a href="#produtos" class="nav-link" onclick="scrollToSection('produtos')">Produtos</a></li>
+                <li><a href="#sobre" class="nav-link" onclick="scrollToSection('sobre')">Sobre Nós</a></li>
+                <li><a href="#contato" class="nav-link" onclick="scrollToSection('contato')">Contato</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Section -->
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -86,7 +83,6 @@
             </div>
         </section>
 
-        <!-- Products Section -->
         <section id="produtos" class="products-section">
             <div class="container">
                 <div class="section-header">
@@ -94,7 +90,6 @@
                     <p>Encontre os medicamentos que você precisa</p>
                 </div>
 
-                <!-- Search and Filters -->
                 <div class="products-controls">
                     <div class="search-filters">
                         <input type="text" id="productSearch" placeholder="Buscar por nome do medicamento...">
@@ -114,12 +109,9 @@
                     </div>
                 </div>
 
-                <!-- Products Grid -->
                 <div class="products-grid" id="productsGrid">
-                    <!-- Products will be loaded here by JavaScript -->
-                </div>
+                    </div>
 
-                <!-- No Results Message -->
                 <div id="noResults" class="no-results" style="display: none;">
                     <i class="fas fa-search"></i>
                     <h3>Nenhum produto encontrado</h3>
@@ -128,7 +120,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="sobre" class="about-section">
             <div class="container">
                 <div class="about-content">
@@ -170,7 +161,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contato" class="contact-section">
             <div class="container">
                 <div class="contact-content">
@@ -213,7 +203,7 @@
                     
                     <div class="contact-form">
                         <h3>Envie uma Mensagem</h3>
-                        <form>
+                        <form action="#" method="POST" onsubmit="alert('Mensagem enviada! Este é um formulário simulado.'); return false;">
                             <div class="form-group">
                                 <input type="text" placeholder="Seu nome" required>
                             </div>
@@ -234,7 +224,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -249,20 +238,20 @@
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#produtos">Produtos</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#home" onclick="scrollToSection('home')">Início</a></li>
+                        <li><a href="#produtos" onclick="scrollToSection('produtos')">Produtos</a></li>
+                        <li><a href="#sobre" onclick="scrollToSection('sobre')">Sobre Nós</a></li>
+                        <li><a href="#contato" onclick="scrollToSection('contato')">Contato</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Categorias</h3>
                     <ul>
-                        <li><a href="#produtos">Analgésicos</a></li>
-                        <li><a href="#produtos">Antibióticos</a></li>
-                        <li><a href="#produtos">Vitaminas</a></li>
-                        <li><a href="#produtos">Medicamentos para Pressão</a></li>
+                        <li><a href="#produtos" onclick="scrollToSection('produtos')">Analgésicos</a></li>
+                        <li><a href="#produtos" onclick="scrollToSection('produtos')">Antibióticos</a></li>
+                        <li><a href="#produtos" onclick="scrollToSection('produtos')">Vitaminas</a></li>
+                        <li><a href="#produtos" onclick="scrollToSection('produtos')">Medicamentos para Pressão</a></li>
                     </ul>
                 </div>
                 
@@ -286,4 +275,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
